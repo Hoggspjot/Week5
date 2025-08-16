@@ -1,5 +1,5 @@
 interface TripStrategy {
 
-    double travelTime(double distance);
+    void travelTime(double distance);
 
 }

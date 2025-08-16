@@ -1,8 +1,10 @@
 public class Car implements TripStrategy {
+    private double kmPerHour = 90.0;
+
 
     @Override
-    public double travelTime(double distance) {
-        double kmPerHour = 90.0;
-        return distance / kmPerHour;
+    public void travelTime(double distance) {
+        System.out.printf("Путешествие на " + distance + " километров на автомобиле займет %.2f часов\n",distance / kmPerHour);
+
     }
 }

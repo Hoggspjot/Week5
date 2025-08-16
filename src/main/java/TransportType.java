@@ -1,8 +1,8 @@
-public class TransportTipe {
+public class TransportType {
 
     private TripStrategy tripStrategy;
 
-    public TransportTipe(TripStrategy tripStrategy) {
+    public TransportType(TripStrategy tripStrategy) {
         this.tripStrategy = tripStrategy;
     }
 
