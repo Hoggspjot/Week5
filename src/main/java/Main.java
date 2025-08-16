@@ -1,13 +1,18 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите расстояние");
+        //получаем значение для расчета
+        System.out.println("Введите расстояние для расчета");
         double distance = scanner.nextDouble();
-        TransportTipe transportTipe = new TransportTipe(new Foot(distance));
+        //для примера расчитываем пешком
+        TransportType transportType = new TransportType(new Foot());
+        transportType.calculateTime(distance);
+        //менем поведение (расчет ) динамически
+        transportType.setTripStrategy(new Car());
+        transportType.calculateTime(distance);
 
     }
 }
